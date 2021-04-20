@@ -10,10 +10,26 @@
     margin-left: -200px;
     transform: translateZ(0); /* offers a bit of a performance boost by pushing some of this processing to the GPU in Safari*/
   }
-  
+
+.julian {
+  animation: dance-cycle 1s steps(8) infinite;
+  background: url(./assets/dontlook.png) 0 0 no-repeat; 
+  height: 140px;
+  width: 100px;
+  position: absolute;
+  bottom: 110px;
+  left: 55%;
+  margin-left: -200px;
+}
+
   @keyframes walk-cycle {  
     0% {background-position: 0 0; } 
     100% {background-position: 0 -2391px; } 
+  }
+
+  @keyframes dance-cycle {  
+    0% {background-position: 0px -400px; } 
+    100% {background-position: -900px -400px; } 
   }
   
   .foreground, .midground, .background {
